@@ -1,5 +1,5 @@
 /*
-Yet Another Palindrome Making Problem
+Fill Candies
 */
 #include <bits/stdc++.h>
 #define int int64_t
@@ -16,6 +16,9 @@ int32_t main()
     cin >> cases;
     while (cases--)
     {
+        int n, k, m;
+        cin >> n >> k >> m;
+        cout << ceil(1.0 * n / (k * m)) << endl;
     }
     return 0;
 }
