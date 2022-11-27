@@ -10,7 +10,10 @@ int main()
     while (cases--)
     {
         cin >> a >> b >> c >> d;
-        (b <= d && c >= a) ? cout << "POSSIBLE" << endl : cout << "IMPOSSIBLE" << endl;
+        if (b <= d && c >= a)
+            cout << "POSSIBLE" << endl;
+        else
+            cout << "IMPOSSIBLE" << endl;
     }
     return 0;
 }
