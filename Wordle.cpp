@@ -6,20 +6,19 @@ using namespace std;
 int main()
 {
     int n;
-    string s1, s2, m;
+    string s1, s2;
     cin >> n;
     for (int i = 0; i < n; i++)
     {
         cin >> s1 >> s2;
-        for (int j = 0; j < 5; j++)
+        for (int j = 0; j < s1.length(); j++)
         {
             if (s1[j] != s2[j])
-                m += 'B';
+                s1[j] = 'B';
             else
-                m += 'G';
+                s1[j] = 'G';
         }
-        cout << m << endl;
-        m = ' ';
+        cout << s1 << endl;
     }
     return 0;
 }

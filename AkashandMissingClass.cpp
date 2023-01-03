@@ -13,14 +13,9 @@ int main()
     {
         ll n;
         cin >> n;
-
-        if (n % 7 >= 6)
-        {
-            cout << (n / 7) + 1 << endl;
-        }
-        else
-        {
-            cout << n / 7 << endl;
-        }
+        int x(0);
+        if (n % 7 == 6)
+            x = 1;
+        cout << n / 7 + x << endl;
     }
 }

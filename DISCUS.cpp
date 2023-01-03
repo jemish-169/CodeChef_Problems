@@ -9,13 +9,13 @@ int main()
     cin >> cases;
     for (int i = 0; i < cases; i++)
     {
-        list<int> mylist;
+        vector<int> vec;
         for (int j = 0; j < 3; j++)
         {
             cin >> data;
-            mylist.push_back(data);
+            vec.push_back(data);
         }
-        cout << *max_element(mylist.begin(), mylist.end()) << endl;
+        cout << *max_element(vec.begin(), vec.end()) << endl;
     }
     return 0;
 }
