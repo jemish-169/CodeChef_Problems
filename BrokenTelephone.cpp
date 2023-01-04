@@ -23,12 +23,17 @@ int32_t main()
         vector<int> vec(x);
         for (int i = 0; i < x; i++)
             cin >> vec[i];
-        for (int i = 1; i < x; i++)
+        if (vec[0] == vec[1])
+            ans++;
+        if (vec[x - 1] == vec[x - 2])
+            ans++;
+
+        for (int i = 1; i < x - 1; i++)
         {
-            if (vec[i] != vec[i - 1])
+            if ((vec[i] == vec[i - 1]) && (vec[i] == vec[i + 1]))
                 ans++;
         }
-        cout << ans << endl;
+        cout << x - ans << endl;
     }
     return 0;
 }
