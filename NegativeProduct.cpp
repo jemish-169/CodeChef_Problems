@@ -1,5 +1,5 @@
 /*
-Sort the String
+Negative Product
 */
 #include <bits/stdc++.h>
 #define int int64_t
@@ -12,19 +12,19 @@ int maxi = INT_MIN;
 int mini = INT_MAX;
 int32_t main()
 {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
     int cases = 1;
     cin >> cases;
     while (cases--)
     {
-        int x, cnt(0);
-        string str;
-        cin >> x >> str;
-        for (int i = 1; i < x; i++)
-        {
-            if (str[i] == '0' && str[i - 1] == '1')
-                cnt++;
-        }
-        cout << cnt << endl;
+        int a, b, c;
+        cin >> a >> b >> c;
+        if (a * b < 0 || b * c < 0 || c * a < 0)
+            cout << "YES" << endl;
+        else
+            cout << "NO" << endl;
     }
     return 0;
 }
