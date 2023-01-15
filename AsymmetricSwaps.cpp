@@ -21,10 +21,16 @@ int32_t main()
         int x;
         cin >> x;
         vector<int> vec(2 * x);
-        for (auto i = 0; i < 2 * x; i++)
+        for (int i = 0; i < 2 * x; i++)
             cin >> vec[i];
         sort(vec.begin(), vec.end());
-        cout << min(vec[x - 1] - vec[0], vec[2 * x - 1] - vec[x]) << endl;
+        int z = 1e9;
+        for (int i = 0; i <= x; i++)
+        {
+            z = min(z, vec[x + i - 1] - vec[i]);
+        }
+        cout << z << endl;
+        // cout << min(vec[x - 1] - vec[0], vec[2 * x - 1] - vec[x]) << endl;
         // cout << vec[x] << " " << vec[0] << " " << vec[2 * x - 1] << " " << vec[x + 1] << endl;
     }
     return 0;
