@@ -21,14 +21,10 @@ int32_t main()
     {
         int a, b;
         cin >> a >> b;
-        int n = max(a, b), mini = INT16_MAX;
-        for (int i = 1; i <= n; i++)
-        {
-            int x = __gcd(b, i);
-            int lcm = (i * a) / __gcd(a, i);
-            mini = min(mini, lcm - x);
-        }
-        cout << mini << endl;
+        int x = __gcd(a, b);
+        int lcmval = (a * x) / __gcd(a, x);
+        int gcdval = __gcd(b, x);
+        cout << lcmval - gcdval << endl;
     }
     return 0;
 }

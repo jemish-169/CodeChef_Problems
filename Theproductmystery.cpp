@@ -21,15 +21,8 @@ int32_t main()
     {
         int b, c;
         cin >> b >> c;
-        int h = b, t = c;
-        while (h != t)
-        {
-            if (h > t)
-                h -= t;
-            else
-                t -= h;
-        }
-        cout << ((b * c) / h) / min(b, c) << endl;
+        int x = __gcd(b, c);
+        cout << c / x << endl;
     }
     return 0;
 }
