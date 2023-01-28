@@ -29,7 +29,7 @@ int32_t main()
             if (i == '1')
                 c++;
         if (s == "1" || s == "10")
-            cout << "NO" << endl;
+            cout << "yes" << endl;
         else if (c <= 3)
             cout << "YES" << endl;
         else
