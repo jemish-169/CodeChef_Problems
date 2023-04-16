@@ -4,10 +4,6 @@ Minimum number of pizza slices
 #include <bits/stdc++.h>
 #define int int64_t
 using namespace std;
-set<int> st;
-map<int, int> mp;
-list<int> ls;
-vector<int> vec;
 int maxi = INT_MIN;
 int mini = INT_MAX;
 int32_t main()
