@@ -1,0 +1,31 @@
+/*
+Weeding
+*/
+#include <bits/stdc++.h>
+#define int int64_t
+using namespace std;
+#define endl "\n"
+int32_t main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int cases = 1;
+    cin >> cases;
+    while (cases--)
+    {
+        int n, m, k, x;
+        cin >> n >> m >> k;
+        for (int i = 0; i < n; i++)
+        {
+            cin >> x;
+        }
+        if (x + k - 1 > m)
+        {
+            cout << "No" << endl;
+        }
+        else
+            cout << "Yes" << endl;
+    }
+    return 0;
+}

@@ -12,7 +12,7 @@ int32_t main()
     {
         int n, s;
         cin >> n;
-        int ma = 0, maxi = 0;
+        int ma = 0, maxi = 0, mam(0), mamm(0);
         for (int i = 0; i < n; i++)
         {
             cin >> s;
@@ -20,6 +20,7 @@ int32_t main()
                 ma = 0;
             else
                 ma++;
+            mam = max(mam, ma);
         }
         for (int i = 0; i < n; i++)
         {
@@ -28,13 +29,14 @@ int32_t main()
                 maxi = 0;
             else
                 maxi++;
+            mamm = max(mamm, maxi);
         }
-        if (maxi < ma)
-            cout << "Addy\n";
-        else if (maxi == ma)
+        if (mamm < mam)
+            cout << "Om\n";
+        else if (mamm == mam)
             cout << "Draw\n";
         else
-            cout << "Om\n";
+            cout << "Addy\n";
     }
     return 0;
 }
